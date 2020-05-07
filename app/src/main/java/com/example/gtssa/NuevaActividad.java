@@ -10,7 +10,7 @@ import android.widget.*;
 
 
 public class NuevaActividad extends AppCompatActivity implements View.OnClickListener {
-    Button bfecha,bfecha2,ingeButton,backbtn;
+    Button bfecha,bfecha2,ingeButton,backbtn,camera;
     EditText efecha,efecha2;
     private  int dia,mes,ano;
     @Override
@@ -28,6 +28,9 @@ public class NuevaActividad extends AppCompatActivity implements View.OnClickLis
         backbtn.setOnClickListener(this);
         ingeButton=(Button)findViewById(R.id.addInge);
         ingeButton.setOnClickListener(this);
+
+        camera=(Button)findViewById(R.id.formCamera);
+        camera.setOnClickListener(this);
         //bhora.setOnClickListener(this);
     }
     @Override
@@ -58,6 +61,11 @@ public class NuevaActividad extends AppCompatActivity implements View.OnClickLis
             Intent i = new Intent(NuevaActividad.this, ListaActividades.class);
             startActivity(i);
 
+        }
+
+        if(v==camera){
+            Intent i = new Intent(NuevaActividad.this, Camara.class);
+            startActivity(i);
         }
 
 

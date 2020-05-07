@@ -25,6 +25,7 @@
         <activity android:name=".NuevaActividad"/>
         <activity android:name=".ListaIngenieros"/>
         <activity android:name=".DescripcionActividad"/>
+        <activity android:name=".NumerosIngenierosMain"/>
     </application>
 
 </manifest>

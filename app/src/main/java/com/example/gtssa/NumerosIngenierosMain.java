@@ -13,7 +13,7 @@ public class NumerosIngenierosMain extends AppCompatActivity {
     //variable del recycler view de lista_ingenieros
     private RecyclerView reIngeNum;
     //variable del adaptador
-    private ingeAdapter adapt;
+    private NumIngenierosAdapter adapt;
     Button backbtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,17 +24,18 @@ public class NumerosIngenierosMain extends AppCompatActivity {
         //backbtn.setOnClickListener(this);
         reIngeNum=(RecyclerView)findViewById(R.id.numerosInge);
         reIngeNum.setLayoutManager(new LinearLayoutManager(this));
-        adapt=new ingeAdapter(obtenerIngenieros());
+        obtenerIngenieros();
         reIngeNum.setAdapter(adapt);
 
 
     }
 
-    public ArrayList<ingenieroModelo> obtenerIngenieros() {
-        ArrayList<ingenieroModelo> nIngenieros = new ArrayList<>();
-        for(int i =0; i<1000; i++) {
-            nIngenieros.add(new ingenieroModelo("Juan Gomez", "Costo por hora:  sinko peso", R.drawable.fotopruebainge));
+    public void obtenerIngenieros() {
+        ArrayList<NumeroIngenieroModelo> nIngenieros = new ArrayList<>();
+        for(int i =0; i<400; i++) {
+            nIngenieros.add(new NumeroIngenieroModelo("2222222222"));
         }
-        return nIngenieros;
+        adapt= new NumIngenierosAdapter(nIngenieros);
+
     }
 }

@@ -38,7 +38,7 @@ public class ListaIngenieros extends AppCompatActivity implements View.OnClickLi
     public ArrayList<ingenieroModelo> obtenerIngenieros() {
         ArrayList<ingenieroModelo> nIngenieros = new ArrayList<>();
         for(int i =0; i<1000; i++) {
-            nIngenieros.add(new ingenieroModelo("Juan Gomez", "Costo por hora:  sinko peso", R.drawable.fotopruebainge));
+            nIngenieros.add(new ingenieroModelo("Juan Gomez", "Costo por hora:  costo de prueba", R.drawable.fotopruebainge));
         }
         return nIngenieros;
     }

@@ -12,7 +12,20 @@ import java.util.ArrayList;
 import java.util.List;
 import androidx.recyclerview.widget.RecyclerView;
 //Este es el adaptador para el RecyclerView
-public class ingeAdapter extends RecyclerView.Adapter<ingeAdapter.ViewHolder> {
+public class ingeAdapter extends RecyclerView.Adapter<ingeAdapter.ViewHolder> implements View.OnClickListener {
+
+    private View.OnClickListener listener;
+    public void setOnClickListener(View.OnClickListener listener){
+        this.listener=listener;
+    }
+    @Override
+    public void onClick(View v) {
+        if(listener!=null){
+            listener.onClick(v);
+        }
+    }
+
+
 
     ArrayList<ingenieroModelo> listaIngenieros;
 
@@ -20,10 +33,13 @@ public class ingeAdapter extends RecyclerView.Adapter<ingeAdapter.ViewHolder> {
         this.listaIngenieros = listaIngenieros;
     }
 
+
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.ingeniero_card,null);
+        view.setOnClickListener(this);
+        ViewHolder viewHolder = new ViewHolder(view);
         return new ViewHolder(view);
     }
 

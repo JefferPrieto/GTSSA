@@ -12,7 +12,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class NumIngenierosAdapter extends RecyclerView.Adapter<NumIngenierosAdapter.ViewHolder> {
-    ArrayList<NumeroIngenieroModelo> listaNumeros;
+    public ArrayList<NumeroIngenieroModelo> listaNumeros;
+
+    public NumIngenierosAdapter(ArrayList<NumeroIngenieroModelo> listaNumeros) {
+        this.listaNumeros = listaNumeros;
+    }
 
     @NonNull
     @Override
@@ -28,14 +32,14 @@ public class NumIngenierosAdapter extends RecyclerView.Adapter<NumIngenierosAdap
 
     @Override
     public int getItemCount() {
-        return 0;
+        return listaNumeros.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         TextView numero;
-        public ViewHolder(View itemView) {
+        public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            numero= (TextView) numero.findViewById(R.id.numero);
+            numero= (TextView) itemView.findViewById(R.id.numero);
         }
     }
 }

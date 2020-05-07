@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/degradado_blanco_naranja"
@@ -36,7 +37,7 @@
         android:layout_height="140dp"
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
-        ></ImageView>
+        app:srcCompat="@drawable/fotopruebainge"></ImageView>
     <TextView
         android:id="@+id/nombre_ingeniero"
         android:layout_width="match_parent"
@@ -57,7 +58,7 @@
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
+
         ></androidx.recyclerview.widget.RecyclerView>
 
 </LinearLayout>
