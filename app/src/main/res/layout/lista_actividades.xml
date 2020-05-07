@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/background_listas"
+
+
+    >
+
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/nuevaAct"
+        android:layout_width="60in"
+        android:layout_height="6in"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="20dp"
+        android:clickable="true"
+        app:srcCompat="@drawable/ic_add_black_24dp"
+        app:backgroundTint="@color/MainOrange"
+        android:alpha=".89"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/MainOrange"
+                android:minHeight="?attr/actionBarSize"
+                android:theme="?attr/actionBarTheme">
+                <Button
+                    android:id="@+id/backbtn"
+                    android:layout_width="14dp"
+                    android:layout_height="16dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/ic_arrow_back"
+                    >
+                </Button>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Actividades"
+                    android:textColor="@android:color/white"
+                    android:textSize="25sp"></TextView>
+
+            </androidx.appcompat.widget.Toolbar>
+
+            <EditText
+                android:id="@+id/nombreActividad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:ems="10"
+                android:background="@drawable/form_rectangle_container"
+                android:hint="Inserte el nombre de una actividad"
+                android:inputType="textPersonName" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/RecyclerAct"
+                android:layout_width="match_parent"
+                android:layout_height="600dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="30.8dp"
+                android:layout_marginRight="10dp">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
