@@ -210,7 +210,11 @@
                 android:orientation="horizontal"
                 android:layout_marginBottom="10dp"
                 >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
 
+                    >
                 <EditText
                     android:id="@+id/lugar"
                     android:layout_width="match_parent"
@@ -221,6 +225,17 @@
                     android:background="@drawable/form_text_field"
                     android:inputType="textPostalAddress"
                     android:textCursorDrawable="@android:drawable/dark_header" />
+
+                    <Button
+                        android:id="@+id/ubicacion"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignEnd="@+id/lugar"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/ico_alfiler"></Button>
+                    </RelativeLayout>
             </LinearLayout>
 
         </LinearLayout>
