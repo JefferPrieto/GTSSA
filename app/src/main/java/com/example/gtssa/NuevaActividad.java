@@ -111,6 +111,7 @@ public class NuevaActividad extends AppCompatActivity implements View.OnClickLis
         );
 
         // Save a file: path for use with ACTION_VIEW intents
+        //Borrar este comentario
         currentPhotoPath = image.getAbsolutePath();
         nombreFoto.setText(imageFileName);
         return image;
