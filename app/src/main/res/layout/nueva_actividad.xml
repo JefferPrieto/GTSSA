@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
+    android:id="@+id/screenId"
     android:orientation="vertical"
     tools:context=".NuevaActividad"
     android:background="@drawable/fondoform"
@@ -290,6 +290,7 @@
                 android:gravity="center"
                 ></TextView>
             <TextView
+                android:id="@+id/nombreFoto"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="5dp"
